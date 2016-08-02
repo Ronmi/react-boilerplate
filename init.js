@@ -1,3 +1,4 @@
+"use strict";
 const fs = require("fs");
 const exec = require("child_process").execSync;
 const typings = "./node_modules/.bin/typings";
