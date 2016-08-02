@@ -61,6 +61,9 @@ module.exports = function(config) {
 	'react/lib/ReactContext': true,
       },
     },
+    webpackMiddleware: {
+      stats: 'errors-only',
+    },
 
     plugins: [
       'karma-sourcemap-loader',
