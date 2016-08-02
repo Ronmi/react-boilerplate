@@ -31,8 +31,7 @@ const script_tmpl = {
 };
 
 function download(f) {
-  //exec("wget -O " + f + " " + base_url+f);
-  console.log(f);
+  exec("wget -O " + f + " " + base_url+f);
 }
 
 // installation scripts
