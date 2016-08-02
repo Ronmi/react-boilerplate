@@ -15,7 +15,7 @@ const new_files = [
   'index.html',
   'src/main.tsx',
   'src/App.tsx',
-  'test/App.spec.tsx'
+  'test/AppTest.tsx'
 ];
 const script_tmpl = {
   "postinstall": "typings install",
