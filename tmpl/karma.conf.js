@@ -16,10 +16,10 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'node_modules/babel-polyfill/dist/polyfill.js',
-      './build/test/**/*.spec.ts',
-      './build/test/**/*.spec.tsx',
-      './build/test/**/*Test.ts',
-      './build/test/**/*Test.tsx',
+      './test/**/*.spec.ts',
+      './test/**/*.spec.tsx',
+      './test/**/*Test.ts',
+      './test/**/*Test.tsx',
     ],
 
 

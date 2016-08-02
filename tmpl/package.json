@@ -1,0 +1,9 @@
+{
+  "name": "my-react-app",
+  "version": "0.0.1",
+  "description": "my react pplication",
+  "main": "src/main.tsx",
+  "scripts": {},
+  "author": "",
+  "license": "GPL-3.0"
+}
