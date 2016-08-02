@@ -1,9 +1,19 @@
 # Synopsis
 
+### Existing project
+
 *CAUTION*: You must have `wget` and `node` in your path, and a valid `package.json` in current working directory.
 
 ```sh
 wget -q -O - https://raw.githubusercontent.com/Ronmi/react-boilerplate/master/init.js | node
+```
+
+### Create new project
+
+*CAUTION*: You must have `wget` and `node` in your path.
+
+```sh
+wget -q -O - https://raw.githubusercontent.com/Ronmi/react-boilerplate/master/init.js | env NEW=1 node
 ```
 
 # What's inside
