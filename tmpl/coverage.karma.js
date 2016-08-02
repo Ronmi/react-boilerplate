@@ -16,6 +16,7 @@ module.exports = function(config) {
     files: [
       'node_modules/babel-polyfill/dist/polyfill.js',
       './build/test/**/*Test.js'
+      './build/test/**/*.spec.js'
     ],
 
     // list of files to exclude
