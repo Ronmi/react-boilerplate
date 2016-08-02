@@ -51,12 +51,13 @@ exec("npm i -D typings typescript webpack " +
      "karma-remap-istanbul remap-istanbul " +
      "karma-sourcemap-loader karma-webpack " +
      "karma-firefox-launcher karma-chrome-launcher karma-phantomjs-launcher phantomjs-prebuilt " +
-     "karma-mocha karma-chai-sinon mocha chai sinon sinon-chai enzyme " +
+     "karma-mocha karma-chai-sinon karma-chai-as-promised" +
+     "mocha chai sinon sinon-chai chai-as-promised enzyme " +
      "istanbul-instrumenter-loader css-loader style-loader file-loader json-loader " +
      "babel-loader babel-preset-es2015 babel-core babel-polyfill");
 
 exec(typings + " i -D enzyme");
-exec(typings + " i -DG dt~mocha dt~chai dt~sinon dt~sinon-chai");
+exec(typings + " i -DG dt~mocha dt~chai dt~sinon dt~sinon-chai dt~chai-as-promised dt~promises-a-plus");
 exec(typings + " i -SG dt~react dt~react-dom");
 
 for (let k in files) {
