@@ -1,5 +1,6 @@
 import { execSync } from "child_process";
 import * as fs from "fs";
+import * as https from "https";
 import * as _ from "lodash";
 import * as consts from "./preset";
 
@@ -14,8 +15,20 @@ function run(cmds: string) {
     }
 }
 
-export function download(f: string) {
-    run("wget -O " + f + " " + consts.base_url + f);
+export function download(f: string): Promise<void> {
+    return new Promise<void>((res, rej) => {
+        let file = fs.createWriteStream(f);
+        file.on("close", () => {
+            console.log("Downloaded " + f);
+            res();
+        });
+        https.get(consts.base_url + f, (r) => {
+            r.pipe(file);
+        }).on("error", (e: any) => {
+            console.log("Failed to download " + f);
+            rej(e);
+        });
+    });
 }
 
 function _install(cmd: string, action: string, flag: string, ...pkgs: string[]) {

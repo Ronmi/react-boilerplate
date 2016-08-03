@@ -1,7 +1,7 @@
 var webpack = require("webpack");
 
 module.exports = {
-  entry: ["lodash", "./src/main.ts"],
+  entry: ["regenerator-runtime/runtime", "lodash", "./src/main.ts"],
   output: {
     filename: "./init.js"
   },
