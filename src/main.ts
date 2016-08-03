@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import { download, install, load } from "./utils";
-import * as _ from "lodash";
+import { merge } from "lodash";
 import * as consts from "./preset";
 
 async function create_project() {
@@ -25,7 +25,7 @@ function install_scripts() {
         conf.scripts = {};
     }
 
-    _.merge(conf.scripts, consts.script_tmpl);
+    merge(conf.scripts, consts.script_tmpl);
     fs.writeFileSync("./package.json", JSON.stringify(conf, null, 2));
 }
 

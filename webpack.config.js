@@ -1,7 +1,8 @@
+var LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 var webpack = require("webpack");
 
 module.exports = {
-  entry: ["regenerator-runtime/runtime", "lodash", "./src/main.ts"],
+  entry: ["regenerator-runtime/runtime", "./src/main.ts"],
   output: {
     filename: "./init.js"
   },
@@ -14,6 +15,8 @@ module.exports = {
 
   plugins: [
     new webpack.DefinePlugin({ 'process.env':{'NODE_ENV': JSON.stringify('production')}}),
+    new LodashModuleReplacementPlugin,
+    new webpack.optimize.OccurrenceOrderPlugin,
     new webpack.optimize.UglifyJsPlugin({compress: {warnings: false}, sourceMap: false}),
   ],
 
@@ -22,7 +25,7 @@ module.exports = {
       {
 	test: /\.tsx?$/,
 	loaders: [
-	  "babel-loader?presets[]=es2015",
+	  "babel-loader?presets[]=es2015&plugins[]=lodash",
 	  "ts-loader?configFileName=tsconfig.webpack.json",
 	],
       },

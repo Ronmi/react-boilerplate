@@ -1,7 +1,7 @@
 import { execSync } from "child_process";
 import * as fs from "fs";
 import * as https from "https";
-import * as _ from "lodash";
+import { concat, join } from "lodash";
 import * as consts from "./preset";
 
 function run(cmds: string) {
@@ -32,8 +32,8 @@ export function download(f: string): Promise<void> {
 }
 
 function _install(cmd: string, action: string, flag: string, ...pkgs: string[]) {
-    let cmds = _.concat([cmd, action, flag], pkgs);
-    run(_.join(cmds, " "));
+    let cmds = concat([cmd, action, flag], pkgs);
+    run(join(cmds, " "));
 }
 
 export function npmS(...pkgs: string[]) {
