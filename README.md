@@ -4,18 +4,28 @@
 
 ### Existing project
 
-*CAUTION*: You must have `wget` and `node` in your path, and a valid `package.json` in current working directory.
-
 ```sh
+# with wget
 wget -q -O - https://raw.githubusercontent.com/Ronmi/react-boilerplate/master/init.js | node
+
+# or with curl
+curl https://raw.githubusercontent.com/Ronmi/react-boilerplate/master/init.js | node
+
+# or even with node itself
+echo 'require("https").get("https://raw.githubusercontent.com/Ronmi/react-boilerplate/master/init.js",r=>{r.on("data",d=>{process.stdout.write(d);});});' | node | node
 ```
 
 ### Create new project
 
-*CAUTION*: You must have `wget` and `node` in your path.
-
 ```sh
+# with wget
 wget -q -O - https://raw.githubusercontent.com/Ronmi/react-boilerplate/master/init.js | env NEW=1 node
+
+# or with curl
+curl https://raw.githubusercontent.com/Ronmi/react-boilerplate/master/init.js | env NEW=1 node
+
+# or even with node itself
+echo 'require("https").get("https://raw.githubusercontent.com/Ronmi/react-boilerplate/master/init.js",r=>{r.on("data",d=>{process.stdout.write(d);});});' | node | env NEW=1 node
 ```
 
 # What's inside
