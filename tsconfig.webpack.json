@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2015",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "removeComments": true,
+    "sourceMap": false,
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "node_modules",
+    "tmpl"
+  ]
+}
