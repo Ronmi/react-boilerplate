@@ -10,6 +10,7 @@ const files = [
   "tsconfig.json"
 ];
 const new_files = [
+  '.gitignore',
   'package.json',
   'webpack.config.js',
   'webpack.minify.js',
@@ -44,7 +45,7 @@ function create() {
   } catch (e) {
   }
   try {
-  fs.mkdirSync("test");
+    fs.mkdirSync("test");
   } catch (e) {
   }
 
