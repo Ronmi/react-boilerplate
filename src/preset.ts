@@ -19,7 +19,7 @@ export const new_files = [
     "webpack.config.js",
     "webpack.minify.js",
     "bs-config.js",
-    "index.html",
+    "public/index.html",
     "src/main.tsx",
     "src/App.tsx",
     "test/AppTest.tsx"

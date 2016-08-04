@@ -11,6 +11,9 @@ async function create_project() {
     try {
         fs.mkdirSync("test");
     } catch (e) {}
+    try {
+        fs.mkdirSync("public");
+    } catch (e) {}
 
     // download initial files
     await Promise.all(consts.new_files.map(download));
