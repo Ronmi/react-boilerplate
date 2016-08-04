@@ -17,6 +17,7 @@ export const new_files = [
     "package.json",
     "webpack.config.js",
     "webpack.minify.js",
+    "bs-config.js",
     "index.html",
     "src/main.tsx",
     "src/App.tsx",
@@ -29,7 +30,9 @@ export const script_tmpl = {
     "webpack": "webpack",
     "webpack:w": "webpack -w",
     "webpack:m": "webpack --config webpack.minify.js",
+    "server": "browser-sync start -c bs-config.js",
     "build": "tsc && npm run webpack:m",
+    "start": "tsc && webpack && concurrently \"npm start webpack:w\" \"npm run server\"",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "test:w": "karma start --browsers PhantomJS",
@@ -51,7 +54,8 @@ export const base_pkgs: Pkgs = {
         "mocha", "chai", "sinon", "sinon-chai", "chai-as-promised", "enzyme",
         "istanbul-instrumenter-loader", "source-map-loader",
         "url-loader", "css-loader", "style-loader", "file-loader", "json-loader",
-        "babel-loader", "babel-preset-es2015", "babel-core"
+        "babel-loader", "babel-preset-es2015", "babel-core",
+        "browser-sync", "concurrently"
     ],
     dep: ["babel-polyfill"],
     typings: {
