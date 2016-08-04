@@ -37,12 +37,14 @@ For existing project, it adds these features to you project environment
 - test environment based on `enzyme`, `karma`, `mocha`, `chai` and `sinon`
 - test coverage support
 - `sinon-chai` and `chai-as-promised` for testing asynchronized requests
+- few helper scripts in `package.json`
 
 For newly created project, it adds even more
 
 - two `webpack` configuration to pack your files with/without compressing
 - a `Hello world` application with test codes
 - git ignorance setting file
+- `browser-sync` for showing your modification on-the-fly
 
 It's suggested to install these packages globally.
 - typescript
@@ -52,7 +54,7 @@ It's suggested to install these packages globally.
 
 # Special notes
 
-- You have to modify the `karma.conf.js` and `coverage.karma.js` for including correct source and test files.
+- This config transpiles your ts codes twice: using `ts-loader` and `babel`. If you are not going to use `async`/`await`, you can remove `babel` in webpack config and change target to `es5` in `tsconfig.json`. This will greatly speed up your compiling.
 - Since `phantomjs` does not support es2015, it is essential to transpile the codes transpiled by `tsc` with `babel`, which is the default setting in this test environment.
 - `babel-polyfill` is the default es5/es6 polyfilling tool. Change it to fit your need.
 - You have to install `react` and `react-dom` packages on your own.
