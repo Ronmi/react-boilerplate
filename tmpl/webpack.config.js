@@ -9,7 +9,7 @@ module.exports = {
 
   output: {
     filename: "[name].js",
-    path: "./js"
+    path: "./public/js"
   },
 
   plugins: [

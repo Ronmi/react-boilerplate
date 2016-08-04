@@ -1,8 +1,7 @@
 module.exports = {
   // Add files or directories here so browsersync can watch them
   "files": [
-    "js",               // Executable js code is packed into js/ by webpack
-    "index.html",
+    "public",               // Executable js code is packed into public/js/ by webpack
     "node_modules"
   ],
   // auto inject browser-sync script into html file
@@ -13,7 +12,7 @@ module.exports = {
     },
   ],
   // Enable static server by default
-  "server": true,
+  "server": "public",
   // If you are running a backend or mock API server, set it up here
   // "proxy": "127.0.0.1:8000",
 
