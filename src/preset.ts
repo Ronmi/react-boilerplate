@@ -32,7 +32,7 @@ export const script_tmpl = {
     "webpack:m": "webpack --config webpack.minify.js",
     "server": "browser-sync start -c bs-config.js",
     "build": "tsc && npm run webpack:m",
-    "start": "tsc && webpack && concurrently \"npm start webpack:w\" \"npm run server\"",
+    "start": "tsc && webpack && concurrently \"npm run webpack:w\" \"npm run server\"",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "test:w": "karma start --browsers PhantomJS",

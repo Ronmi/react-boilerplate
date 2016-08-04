@@ -39,7 +39,7 @@ async function patch_project() {
 
 
 async function main() {
-    const is_new = process.env.NEW !== "";
+    const is_new = process.env.NEW !== undefined && process.env.NEW !== "";
 
     if (is_new) {
         await create_project();
