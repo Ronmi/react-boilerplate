@@ -60,7 +60,11 @@ export const base_pkgs: Pkgs = {
     dep: ["babel-polyfill"],
     typings: {
         "-D": ["enzyme"],
-        "-DG": ["dt~mocha", "dt~chai", "dt~sinon", "dt~sinon-chai", "dt~chai-as-promised", "dt~promises-a-plus"],
+        "-DG": [
+            "dt~mocha", "dt~chai", "dt~sinon", "dt~sinon-chai",
+            "dt~chai-as-promised", "dt~promises-a-plus",
+            "file:require.d.ts",
+        ],
         "-SG": ["dt~react", "dt~react-dom"]
     }
 };
