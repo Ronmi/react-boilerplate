@@ -16,6 +16,7 @@ export const files = [
 export const new_files = [
     ".gitignore",
     "package.json",
+    "require.d.ts",
     "webpack.config.js",
     "webpack.minify.js",
     "bs-config.js",
