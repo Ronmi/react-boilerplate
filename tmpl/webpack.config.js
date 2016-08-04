@@ -1,3 +1,4 @@
+var LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 var webpack = require("webpack");
 const pkg = require("./package.json");
 module.exports = {
