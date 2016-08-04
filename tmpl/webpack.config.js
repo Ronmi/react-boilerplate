@@ -16,6 +16,8 @@ module.exports = {
       name: "vendor",
       filename: "vendor.js"
     }),
+    new LodashModuleReplacementPlugin,
+    new webpack.optimize.OccurrenceOrderPlugin,
   ],
 
   // Enable sourcemaps for debugging webpack's output.
@@ -31,7 +33,7 @@ module.exports = {
       {
 	test: /\.tsx?$/,
 	loaders: [
-	  "babel-loader?presets[]=es2015",
+	  "babel-loader?presets[]=es2015&plugins[]=lodash",
 	  "ts-loader",
 	],
       },

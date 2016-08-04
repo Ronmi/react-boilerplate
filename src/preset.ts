@@ -55,7 +55,8 @@ export const base_pkgs: Pkgs = {
         "istanbul-instrumenter-loader", "source-map-loader",
         "url-loader", "css-loader", "style-loader", "file-loader", "json-loader",
         "babel-loader", "babel-preset-es2015", "babel-core",
-        "browser-sync", "concurrently"
+        "browser-sync", "concurrently",
+        "lodash", "lodash-webpack-plugin", "babel-plugin-lodash"
     ],
     dep: ["babel-polyfill"],
     typings: {
