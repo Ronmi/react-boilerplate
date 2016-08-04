@@ -32,22 +32,24 @@ echo 'require("https").get("https://raw.githubusercontent.com/Ronmi/react-boiler
 
 For existing project, it adds these features to you project environment
 
-- typescript compiler `typescript` which supports es6 taget, so you can write `async` and `await` with ease
-- type manager `typings`
-- test environment based on `enzyme`, `karma`, `mocha`, `chai` and `sinon`
-- test coverage support
-- `sinon-chai` and `chai-as-promised` for testing asynchronized requests
-- few helper scripts in `package.json`
+- Typescript compiler `typescript` which supports es6 taget, so you can write `async` and `await` with ease.
+- Type manager `typings`.
+- Test environment based on `enzyme`, `karma`, `mocha`, `chai` and `sinon`.
+- Test coverage support.
+- `sinon-chai` and `chai-as-promised` for testing asynchronized requests.
+- Few helper scripts in `package.json`.
+- Tnstall correct type definition of `require`. You can use webpack-specific require feature like code-splitting and load css file.
 
 For newly created project, it adds even more
 
-- two `webpack` configuration to pack your files with/without compressing
-- a `Hello world` application with test codes
-- git ignorance setting file
-- `browser-sync` for showing your modification on-the-fly
-- `lodash` and relative webpack settings. It will not included in packed file if you're not using it.
+- Two `webpack` configuration to pack your files with/without compressing.
+- A `Hello world` application with test codes.
+- Sample `.gitignore`.
+- Ready-to-work `browser-sync` for static pages. To integrate with your backend or mock server, related configuration is leaved in `bs-config.js`.
+- `lodash` and related webpack settings. It will not be included in packed file if you're not using it.
 
 It's suggested to install these packages globally.
+
 - typescript
 - typings
 - karma
@@ -55,15 +57,14 @@ It's suggested to install these packages globally.
 
 # Special notes
 
-- This config transpiles your ts codes twice: using `ts-loader` and `babel`. If you are not going to use `async`/`await`, you can remove `babel` in webpack config and change target to `es5` in `tsconfig.json`. This will greatly speed up your compiling.
-- Since `phantomjs` does not support es2015, it is essential to transpile the codes transpiled by `tsc` with `babel`, which is the default setting in this test environment.
-- `babel-polyfill` is the default es5/es6 polyfilling tool. Change it to fit your need.
-- You have to install `react` and `react-dom` packages on your own.
-- You may want to add `coverage` and `build` in your `.gitignore`.
+- `async`/`await` in typescript needs es2015 target, so this config transpiles your ts codes twice using `ts-loader` and `babel`. If you are not going to use `async`/`await`, you can remove `babel` in webpack config and change target to `es5` in `tsconfig.json`. This will greatly speed up your compiling.
+- `babel-polyfill` is the default es5/es6 polyfilling tool, mostly for genertor. If you don't need `async`/`await` and changed target to `es5`, you may want to use `es5-shim` and `es6-shim` instead, which can reduce the size of packed js.
+- For existing project, you have to install `react` and `react-dom` packages on your own.
+- For existing project, you may want to add `public/js`, `coverage` and `build` in your `.gitignore`.
 
 # Tips of success
 
 - When introducing new node modules to the project, use `-S` (`--save`) for external dependency (like jquery), `-D` for others. Webpack will read your `package.json` and pack external dependencies into `vendor.js`.
 - In most cases, you'll find it easier to use global typings for external dependencies.
 - Use `async`/`await` only for replacing `.then(...).then(..)`.
-- Always test your codes. `npm run test:w` will be your best friend.
+- Always test your code. `npm run test:w` will be your best friend.
