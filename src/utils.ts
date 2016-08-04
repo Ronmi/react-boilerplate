@@ -41,7 +41,7 @@ export function npmS(...pkgs: string[]) {
 }
 
 export function npmD(...pkgs: string[]) {
-    _install("npm", "i", "-G", ...pkgs);
+    _install("npm", "i", "-D", ...pkgs);
 }
 
 export function typings(flag: string, ...pkgs: string[]) {
