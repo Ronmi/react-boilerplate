@@ -7,20 +7,4 @@ node_js:
   - "5"
 
 script:
-  - set -e
-  - echo "Test init.js"
-  - mkdir orz
-  - cd orz
-  - cat ../init.js | env NEW=1 node
-  - npm test
-  - npm run coverage
-  - ./node_modules/.bin/webpack
-  - ./node_modules/.bin/webpack --config webpack.minify.js
-  - cd ..
-  - echo "Test template"
-  - cd tmpl
-  - cat ../init.js | node
-  - npm test
-  - npm run coverage
-  - ./node_modules/.bin/webpack
-  - ./node_modules/.bin/webpack --config webpack.minify.js
+  - test.sh
