@@ -45,6 +45,7 @@ For newly created project, it adds even more
 - a `Hello world` application with test codes
 - git ignorance setting file
 - `browser-sync` for showing your modification on-the-fly
+- `lodash` and relative webpack settings. It will not included in packed file if you're not using it.
 
 It's suggested to install these packages globally.
 - typescript
