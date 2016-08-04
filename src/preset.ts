@@ -9,7 +9,8 @@ export const base_url = "https://raw.githubusercontent.com/Ronmi/react-boilerpla
 export const files = [
     "karma.conf.js",
     "coverage.karma.js",
-    "tsconfig.json"
+    "tsconfig.json",
+    "require.d.ts",
 ];
 
 export const new_files = [
