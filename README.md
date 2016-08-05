@@ -46,7 +46,7 @@ For newly created project, it adds even more
 - A `Hello world` application with test codes.
 - Sample `.gitignore`.
 - Ready-to-work `browser-sync` for static pages. To integrate with your backend or mock server, related configuration is leaved in `bs-config.js`.
-- `lodash` and related webpack settings. It will not be included in packed file if you're not using it.
+- `lodash` and related webpack settings. It will not be included in packed file if you're not using it. **You'll have to run `typings i -S lodash` to install lodash typing info manually before using it.**
 
 It's suggested to install these packages globally.
 
