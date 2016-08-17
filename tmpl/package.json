@@ -1,9 +1,21 @@
 {
   "name": "my-react-app",
   "version": "0.0.1",
-  "description": "my react pplication",
+  "description": "my react application",
+  "keywords": [
+    "react",
+    "typescript"
+  ],
   "main": "src/main.tsx",
   "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your/repository.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your/repository/issues"
+  },
+  "homepage": "https://github.com/your/repository#readme",
   "author": "",
   "license": "GPL-3.0"
 }

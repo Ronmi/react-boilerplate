@@ -45,12 +45,19 @@ module.exports = function(config) {
 	  },
 	  // https://github.com/airbnb/enzyme/issues/47
 	  { test: /\.json$/, loader: 'json' },
+
+	  // here goes optional file types
+	  
+	  // css and css module
 	  {
 	    test: /\.css/,
-	    loader: "style-loader!css-loader",
-	    exclude: /css\//,
+	    loader: "style-loader!css-loader?modules",
 	  },
-	  { test: /\.(ttf|woff|eot|svg)/, loader: "url-loader" },
+	  // common image formats
+	  { test: /\.svg$/, loader: "url-loader?mimetype=image/svg+xml" },
+	  { test: /\.png$/, loader: "url-loader?mimetype=image/png" },
+	  { test: /\.gif$/, loader: "url-loader?mimetype=image/gif" },
+	  { test: /\.jpe?g$/, loader: "url-loader?mimetype=image/jpeg" },
 	],
         preLoaders: [
           // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
