@@ -48,7 +48,7 @@ module.exports = function(config) {
 	  { test: /\.tsx?$/, loader: "babel-loader?presets[]=es2015!ts-loader", exclude: /node_modules/ },
 
 	  // https://github.com/airbnb/enzyme/issues/47
-	  { test: /\.json$/, loader: 'json' }
+	  { test: /\.json$/, loader: 'json' },
 
 	  // here goes optional file types
 	  
